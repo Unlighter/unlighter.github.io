@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#"><head>
+<script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
@@ -29,6 +30,7 @@ onload="renderMathInElement(document.body);"></script>
 <p>aditya bhoj test.1$$
 \int_0^\infty e^{-x}\,dx = 1
 $$, the misery, the pain ?<br>
+<div id="animation-container" style="width: 100%; height: 500px; border: 1px solid #ccc;"></div>
 Didn't we let go, allowed it, let it grow ?<br>
 If we can't restrain the beast which dwells inside<br>
 It will find its way somehow, somewhere in time<br>
@@ -758,7 +760,19 @@ Dans mon vocabulaire, ce mot représente une couleur émotive plutôt qu'une sen
 <p>J'ai envie de vous partager une musique découverte lors d'une promenade nocture : 虞兮叹.<br>
 Bien qu'elle soit en mandarin et que je ne suis pas en mesure de comprendre les paroles à mon niveau, l'écouter m'emplit exactement de ce que j'ai décrit ci-dessus.</p>
 <iframe frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;margin:12px 0;background-color:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" src="https://embed.music.apple.com/us/album/%E8%99%9E%E5%85%AE%E5%8F%B9/1669704366?i=1669704983"></iframe>
+<script>
+    var elt = document.getElementById('animation-container');
+    var calc = Desmos.Calculator3D(elt, {
+        expressions: false, // Hides the math sidebar
+        settingsMenu: false, 
+        keypad: false
+    });
 
+    // This is your specific graph data
+    var myState = {"version":11,"randomSeed":"8224331f38af0d0f5245e6291c671e50","graph":{"viewport":{"xmin":-5.5124999999999975,"ymin":-5.5124999999999975,"zmin":-5.5124999999999975,"xmax":5.5124999999999975,"ymax":5.5124999999999975,"zmax":5.5124999999999975},"worldRotation3D":[0.8267128701647966,-0.5561007726387797,0.0854269335321439,0.5531553835309806,0.8311148721258736,0.05715934744331639,-0.10278595221552408,2.379955246440197e-13,0.9947034975435457],"axis3D":[-0.5561007726397557,0.8311148721266285,-2.4323866908375387e-13],"perspectiveDistortion":6.25,"showPlane3D":false,"showNumbers3D":false,"showAxis3D":false,"showAxisLabels3D":false,"product":"graphing-3d","threeDMode":true},"expressions":{"list":[{"type":"expression","id":"1","color":"#c74440","latex":"z\\\\ =0.3\\\\cdot\\\\sin\\\\left(y+t\\\\right)\\\\ +\\\\ 0.3\\\\cdot\\\\left|x\\\\right|\\\\ \\\\left|\\\\sin\\\\left(\\\\left|x\\\\right|-t\\\\right)\\\\right|\\\\left\\\\{y\\\\ <mx+c\\\\right\\\\}\\\\ \\\\left\\\\{y<-mx+c\\\\right\\\\}\\\\left\\\\{y>\\\\log\\\\left(\\\\left|x\\\\right|\\\\right)-1\\\\right\\\\}","colorLatex":"C_{1}"},{"type":"expression","id":"3","color":"#388c46","latex":"t=2.682","hidden":true,"slider":{"animationPeriod":11428.57142857143,"playDirection":-1,"isPlaying":true}},{"type":"expression","id":"2","color":"#2d70b3","latex":"y\\\\ =mx\\\\ +c","hidden":true},{"type":"expression","id":"4","color":"#6042a6","latex":"m=0.5","hidden":true},{"type":"expression","id":"5","color":"#aaaaaa","latex":"c=2.8","hidden":true},{"type":"expression","id":"6","color":"#c74440","latex":"y\\\\ =-mx+c","hidden":true},{"type":"expression","id":"7","color":"#2d70b3","latex":"y\\\\ =\\\\log\\\\left(\\\\left|x\\\\right|\\\\right)-1","hidden":true},{"type":"expression","id":"8","color":"#388c46","latex":"C_{1}=\\\\operatorname{hsv}\\\\left(h,s,v\\\\right)"},{"type":"expression","id":"9","color":"#6042a6","latex":"h=360","hidden":true,"slider":{"hardMin":true,"hardMax":true,"min":"0","max":"360","step":"1"}},{"type":"expression","id":"10","color":"#aaaaaa","latex":"s=0.766","hidden":true,"slider":{"hardMin":true,"hardMax":true,"min":"0","max":"1"}},{"type":"expression","id":"11","color":"#c74440","latex":"v=\\\\sin\\\\left(\\\\frac{y}{2}\\\\right)+0.5","hidden":true,"slider":{"hardMin":true,"hardMax":true,"min":"0","max":"1"}}]},"includeFunctionParametersInRandomSeed":true,"doNotMigrate3dLineWidthZero":true,"doNotMigrateMovablePointStyle":true};
+
+    calc.setState(myState);
+</script>
 <p>Et la fin est vraiment très poétique...</p>
 <blockquote>
 <p>与你来生共寄山高水长</p>
